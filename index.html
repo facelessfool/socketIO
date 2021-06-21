@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>socket io</title>
+  </head>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  // socket.on('testEvent', function(data){document.write(data.description)})
+ 
+  // socket.emit('clientEvent', 'Sent an event from the client!');
+  socket.on('newbie', (data)=>{
+    document.write(data)
+  })
+ socket.on('broadcast', (data)=>{
+   document.body.innerHTML=" ";
+   document.write(data.description);
+ }) 
+</script>
+  </head>
+
+  <body>
+    
+  </body>
+</html>
